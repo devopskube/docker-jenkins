@@ -16,7 +16,7 @@ def image_name = ''
 def dockerUser = "${System.env.'DOCKER_USER'}"
 def dockerPwd = "${System.env.'DOCKER_PWD'}"
 
-podTemplate(label: 'docker-mysql', containers: [
+podTemplate(label: 'docker-jenkins', containers: [
             containerTemplate(name: 'jnlp', image: 'jenkinsci/jnlp-slave:2.62-alpine', args: '${computer.jnlpmac} ${computer.name}'),
             containerTemplate(name: 'docker', image: 'docker:1.12.3-dind', ttyEnabled: true, command: 'cat', privileged: true, instanceCap: 1)
         ],
@@ -25,7 +25,7 @@ podTemplate(label: 'docker-mysql', containers: [
         ]) {
     node() {
         stage('Checkout') { // happens on master?
-            git url: 'https://github.com/devopskube/docker-mysql.git'
+            git url: 'https://github.com/devopskube/docker-jenkins.git'
             tag_name = sh (
                     script: 'git tag -l --points-at HEAD',
                     returnStdout: true
