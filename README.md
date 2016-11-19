@@ -2,7 +2,7 @@
 
 This image is based on the "official" [Jenkins Docker image](https://github.com/jenkinsci/docker).
 
-https://github.com/kubernetes/charts/blob/master/stable/jenkins/master-image/Dockerfile
+Please have a look at the [Dockerfile](https://github.com/devopskube/docker-jenkins/blob/master/Dockerfile).
 
 The system property "jenkins.install.runSetupWizard" is set to false, so that the setup wizard is not run. Furthermore the plugins listed in the file plugins.txt are installed (latest version).
 
