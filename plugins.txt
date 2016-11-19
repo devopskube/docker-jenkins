@@ -1,0 +1,14 @@
+gerrit-trigger
+git
+github
+gogs-webhook
+gradle
+gravatar
+maven
+oic-auth
+workflow-cps-global-lib
+pipeline-model-definition
+pipeline-stage-view
+publish-over-ssh
+sbt
+ssh-slaves

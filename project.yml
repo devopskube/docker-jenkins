@@ -1,0 +1,7 @@
+name: "mysql-jenkins"
+version: 0.0.1
+gitUrl: "https://api.github.com/repos/devopskube/docker-jenkins/tags"
+imageName: "devopskube/jenkins"
+issueProjectName: "foo"
+codeReview: true
+chatRoom: "devopskube"
