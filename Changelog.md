@@ -1,5 +1,7 @@
 # Changelog
 
+**0.0.3 (WIP)**
+- Adopt Documentation
 **0.0.2**
 - Add Makefile
 - Add Jenkinsfile
