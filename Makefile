@@ -25,25 +25,25 @@ push:
 	@docker push ${IMAGE_NAME}:${VERSION}
 
 quickstart:
-	@echo "Starting redmine..."
-	@docker run --name=redmine-demo -d -p 10080:80 \
+	@echo "Starting jenkins..."
+	@docker run --name=jenkins -d -p 10080:80 \
 		-v /var/run/docker.sock:/run/docker.sock \
 		-v $(shell which docker):/bin/docker \
-		devopskube/redmine:latest >/dev/null
+		devopskube/jenkins:latest >/dev/null
 	@echo "Please be patient. This could take a while..."
-	@echo "Redmine will be available at http://localhost:10080"
+	@echo "Jenkins will be available at http://localhost:8080"
 	@echo "Type 'make logs' for the logs"
 
 stop:
-	@echo "Stopping redmine..."
-	@docker stop redmine-demo >/dev/null
+	@echo "Stopping jenkins..."
+	@docker stop jenkins >/dev/null
 
 purge: stop
 	@echo "Removing stopped container..."
-	@docker rm redmine-demo >/dev/null
+	@docker rm jenkins >/dev/null
 
 logs:
-	@docker logs -f redmine-demo
+	@docker logs -f jenkins
 
 .PHONY: bump
 bump:
