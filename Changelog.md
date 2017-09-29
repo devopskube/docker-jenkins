@@ -1,5 +1,8 @@
 # Changelog
 
+**2.73.1-1**
+- Adopted release version
+
 **0.0.3**
 - Adopt Documentation
 - Upgrade to 2.73.1
