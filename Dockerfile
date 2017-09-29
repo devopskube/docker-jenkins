@@ -1,6 +1,4 @@
-FROM jenkins:2.32.1
-
-ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
+FROM jenkins/jenkins:2.73.1
 
 USER jenkins
 
@@ -22,5 +20,3 @@ USER jenkins
 RUN mkdir -p /usr/share/jenkins/ref/secrets/ \
     && echo "false" > /usr/share/jenkins/ref/secrets/slave-to-master-security-kill-switch \
     && /usr/local/bin/install-plugins.sh $(cat /usr/share/jenkins/plugins.txt | tr '\n' ' ')
-
-ENV JAVA_OPTS="-Ddocker.host=unix:/var/run/docker.sock"

@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-@Grab('org.yaml:snakeyaml:1.17')
+@Grab('org.yaml:snakeyaml:1.18')
 import org.yaml.snakeyaml.*
 
 /* Only keep the 5 most recent builds. */
@@ -17,8 +17,8 @@ def dockerUser = "${System.env.'DOCKER_USER'}"
 def dockerPwd = "${System.env.'DOCKER_PWD'}"
 
 podTemplate(label: 'docker-jenkins', containers: [
-            containerTemplate(name: 'jnlp', image: 'jenkinsci/jnlp-slave:2.62-alpine', args: '${computer.jnlpmac} ${computer.name}'),
-            containerTemplate(name: 'docker', image: 'docker:1.12.3-dind', ttyEnabled: true, command: 'cat', privileged: true, instanceCap: 1)
+            containerTemplate(name: 'jnlp', image: 'jenkinsci/jnlp-slave:3.10-1-alpine', args: '${computer.jnlpmac} ${computer.name}'),
+            containerTemplate(name: 'docker', image: 'docker:17.09.0-dind', ttyEnabled: true, command: 'cat', privileged: true, instanceCap: 1)
         ],
         volumes: [
             hostPathVolume(mountPath: "/var/run/docker.sock", hostPath: "/var/run/docker.sock")

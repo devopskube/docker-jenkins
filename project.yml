@@ -1,4 +1,4 @@
-name: "mysql-jenkins"
+name: "jenkins"
 version: 0.0.2
 gitUrl: "https://api.github.com/repos/devopskube/docker-jenkins/tags"
 imageName: "devopskube/jenkins"

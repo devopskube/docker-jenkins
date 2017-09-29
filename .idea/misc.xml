@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" />
+  <component name="SbtLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../../../colman" value="1432067489997" />
+        <entry key="$PROJECT_DIR$/../../../koauth" value="1432139866783" />
+        <entry key="$PROJECT_DIR$/../../../summasumarum/sumsum-play" value="1441483109910" />
+        <entry key="$PROJECT_DIR$/../../../summasumarum/sumsum-play/rest-api" value="1441570856313" />
+        <entry key="$PROJECT_DIR$/../../../summasumarum/sumsum-spray" value="1428176967207" />
+      </map>
+    </option>
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ScalaSbtSettings">
+    <option name="customLauncherPath" value="/usr/bin/sbt" />
+    <option name="maximumHeapSize" value="1024" />
+  </component>
+</project>
